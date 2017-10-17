@@ -17,8 +17,12 @@ textarea {
     width: 100%;
 }
 
-span {
+.counter {
     float: right;
+}
+
+.red {
+    color: red;
 }
 
 input {
