@@ -19,6 +19,12 @@
     <!-- New-Tweet CSS -->
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
 
+    <!-- View-Tweet CSS -->
+    <link rel="stylesheet" href="/styles/view-tweet.css" type="text/css" />
+
+    <!-- Font-Awesome for icons -->
+    <link rel="stylesheet" href="/font-awesome-4.7.0/css/font-awesome.min.css" type="text/css" />
+    
     <!-- External JS -->
     <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
 
@@ -50,8 +56,25 @@
           <span class="counter">140</span>
         </form>
       </section>
-    </main>
-  
+      <section id="all-tweets"> 
+        <article class="tweet">
+          <header> 
+            <img src="https://vanillicon.com/788e533873e80d2002fa14e1412b4188_50.png" alt="avatar"> 
+            <h2>Bill Fields</h2> 
+            <p class="twitter-handle">@MrFields</p>
+          </header>
+          <p> Little tweet here </p>         
+          <footer> 10 days ago            
+            <div id="hover-content">
+              <i class="fa fa-flag" aria-hidden="true"></i>
+              <i class="fa fa-retweet" aria-hidden="true"></i>
+              <i class="fa fa-heart" aria-hidden="true"></i>
+            </div>            
+          </footer>
+        </article>
+      </section>
+    </main> 
+
   </body>
 
 </html>
