@@ -116,7 +116,14 @@ $(document).ready(function() {
       })
 
       $("form").trigger("reset");
-      
+
+    })
+
+    $(".compose-button").click(function(){
+      $(".new-tweet").slideToggle(function () {
+        $(".new-tweet").find("textarea").focus();        
+      });
+      return false;
     })
    
 });
