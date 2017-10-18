@@ -10,7 +10,8 @@
     float: right;
     font-size: large;
     position: relative;
-    top: -4px;
+    top: -35px;
+    padding-right: 10px;
 }
 
 #all-tweets:hover #hover-content {
@@ -41,7 +42,6 @@ article.tweet header {
 
 article.tweet footer {
     border-top: 1px solid grey;
-    padding: 10px;
     font-size: 0.75em;
 }
 
@@ -58,7 +58,7 @@ article.tweet h2 {
 }
 
 article.tweet p {
-    padding: 20px;
+    padding-left: 10px;
     font-size: larger;
 }
 
@@ -66,7 +66,7 @@ article.tweet .twitter-handle {
     display: inline;
     font-size: 17px;
     position: relative;
-    top: -31px;
+    top: -15px;
     float: right;
     padding-right: 5px;
 
