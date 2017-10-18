@@ -4,55 +4,55 @@
 
 // function to parse the date into amount of time passed
 function parseHumanDate(timeCreated) {
-    var created = new Date(timeCreated);
-    var seconds = Math.floor((Date.now() - created) / 1000);
+  var created = new Date(timeCreated);
+  var seconds = Math.floor((Date.now() - created) / 1000);
 
-    var interval = Math.floor(seconds / 31536000);
-    if (interval >= 1) {
-        if(interval < 2) {
-          return interval + ' year ago';
-        } else {
-          return interval + ' years ago';
-        }
+  var interval = Math.floor(seconds / 31536000);
+  if (interval >= 1) {
+    if(interval < 2) {
+      return interval + ' year ago';
+    } else {
+      return interval + ' years ago';
     }
+  }
 
-    interval = Math.floor(seconds / 2592000);
-    if (interval >= 1) {
-        if(interval < 2) {
-          return interval + ' month ago';
-        } else {
-          return interval + ' months ago';
-        }
+  interval = Math.floor(seconds / 2592000);
+  if (interval >= 1) {
+    if(interval < 2) {
+      return interval + ' month ago';
+    } else {
+      return interval + ' months ago';
     }
+  }
 
-    interval = Math.floor(seconds / 86400);
-    if (interval >= 1) {
-        if(interval < 2) {
-          return interval + ' hour ago';
-        } else {
-          return interval + ' hours ago';
-        }
+  interval = Math.floor(seconds / 86400);
+  if (interval >= 1) {
+    if(interval < 2) {
+      return interval + ' hour ago';
+    } else {
+      return interval + ' hours ago';
     }
+  }
 
-    interval = Math.floor(seconds / 3600);
-    if (interval >= 1) {
-        if(interval < 2) {
-          return interval + ' hour ago';
-        } else {
-          return interval + ' hours ago';
-        }
+  interval = Math.floor(seconds / 3600);
+  if (interval >= 1) {
+    if(interval < 2) {
+      return interval + ' hour ago';
+    } else {
+      return interval + ' hours ago';
     }
+  }
 
-    interval = Math.floor(seconds / 60);
-    if (interval >= 1) {
-        if(interval < 2) {
-          return interval + ' minute ago';
-        } else {
-          return interval + ' minutes ago';
-        }
+  interval = Math.floor(seconds / 60);
+  if (interval >= 1) {
+    if(interval < 2) {
+      return interval + ' minute ago';
+    } else {
+      return interval + ' minutes ago';
     }
+  }
 
-    return Math.floor(seconds) + ' seconds ago';
+  return Math.floor(seconds) + ' seconds ago';
 }
 
 
@@ -84,11 +84,11 @@ $(document).ready(function() {
      };
     
     const renderTweets = function(tweets) {
-        const $tweetsContainer = $("#all-tweets");
-        for (var tweet of tweets) {
-            createTweetElement(tweet).prependTo($tweetsContainer);
-        }
-        return $tweetsContainer;
+      const $tweetsContainer = $("#all-tweets");
+      for (var tweet of tweets) {
+        createTweetElement(tweet).prependTo($tweetsContainer);
+      }
+      return $tweetsContainer;
     }
 
     function loadTweets() {
@@ -102,11 +102,19 @@ $(document).ready(function() {
     
     $(".new-tweet form").submit(function(event) {
       event.preventDefault();
+      if(!$('textarea').val()) {
+       alert("You have not entered a tweet to submit");
+       return;
+      }
+      if($(".counter").text() < 0) {
+        alert("Your tweet is too long");
+        return;
+      }
       $.post("/tweets", $(this).serialize(), function() {
         $.get("/tweets", renderTweets)
       })
     })
-
+   
 });
 
 
