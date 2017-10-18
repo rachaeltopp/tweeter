@@ -24,3 +24,23 @@
     font-size: 2em;
     line-height: 75px;
 }
+
+#nav-bar .compose-button {
+    float: right;
+    padding: 10px;
+    border-color: black;
+    border-width: 1px;
+    border-radius: 5px;
+    margin-top: 10px;
+    background-color: white;
+    opacity: 0.9;
+    width: 125px;
+    height: 60px;
+    font-size: 20px;
+    color: #33988e;
+}
+
+#nav-bar .compose-button:hover {
+    opacity: 1;
+    color: black;
+}
