@@ -87,5 +87,22 @@ $(document).ready(function() {
         return $tweetsContainer;
     }
 
-    renderTweets(data);
+    function loadTweets() {
+      $.ajax({
+        url: '/tweets/',
+        method: 'GET',
+        success: renderTweets
+      });
+    }
+    loadTweets();
+    
+    $(".new-tweet form").submit(function(event) {
+      event.preventDefault();
+      $.post("/tweets", $(this).serialize(), function() {
+        $.get("/tweets", renderTweets)
+      })
+    })
+
 });
+
+
