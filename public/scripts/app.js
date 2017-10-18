@@ -110,9 +110,13 @@ $(document).ready(function() {
         alert("Your tweet is too long");
         return;
       }
+
       $.post("/tweets", $(this).serialize(), function() {
-        $.get("/tweets", renderTweets)
+        $.get("/tweets", renderTweets);
       })
+
+      $("form").trigger("reset");
+      
     })
    
 });
