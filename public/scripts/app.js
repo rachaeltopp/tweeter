@@ -102,7 +102,7 @@ $(document).ready(function() {
     
     $(".new-tweet form").submit(function(event) {
       event.preventDefault();
-      if(!$('textarea').val()) {
+      if(!$('textarea').val() || $('textarea').val().trim() == "") {
        alert("I'm sure you can think of something to say!");
        return;
       }
