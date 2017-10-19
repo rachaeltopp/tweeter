@@ -103,11 +103,11 @@ $(document).ready(function() {
     $(".new-tweet form").submit(function(event) {
       event.preventDefault();
       if(!$('textarea').val()) {
-       alert("You have not entered a tweet to submit");
+       alert("I'm sure you can think of something to say!");
        return;
       }
       if($(".counter").text() < 0) {
-        alert("Your tweet is too long");
+        alert("Woah, keep it shorter than 140 characters!");
         return;
       }
 

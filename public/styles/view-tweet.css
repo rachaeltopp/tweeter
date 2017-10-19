@@ -1,32 +1,34 @@
 #all-tweets {
     padding-left: 2em;
     padding-right: 2em;
-    opacity: 0.7;
 }
 
 #hover-content {
-    opacity: 0;
     display: inline;
     float: right;
     font-size: large;
     position: relative;
     top: -35px;
     padding-right: 10px;
+    opacity: 0;
 }
 
-#all-tweets:hover #hover-content {
+article.tweet:hover #hover-content {
     opacity: 1;
-    display: inline;
-}
-
-#all-tweets:hover {
-    opacity: 1.0;
 }
 
 .tweet {
     border-radius: 10px;
     border: 1px solid grey;
     margin: 40px 0;
+}
+
+article.tweet {
+    opacity: 0.7;
+}
+
+article.tweet:hover {
+    opacity: 1;
 }
 
 article.tweet header {
