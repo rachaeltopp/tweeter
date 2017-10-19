@@ -91,6 +91,15 @@ $(document).ready(function() {
       return $tweetsContainer;
     }
 
+    const updateTweets = function(tweets) {
+      const $tweetsContainer = $("#all-tweets");
+      $tweetsContainer.empty();
+      for (var tweet of tweets) {
+        createTweetElement(tweet).prependTo($tweetsContainer);
+      }
+      return $tweetsContainer;
+    }
+
     function loadTweets() {
       $.ajax({
         url: '/tweets/',
@@ -112,7 +121,7 @@ $(document).ready(function() {
       }
 
       $.post("/tweets", $(this).serialize(), function() {
-        $.get("/tweets", renderTweets);
+        $.get("/tweets", updateTweets);
       })
 
       $("form").trigger("reset");
