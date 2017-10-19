@@ -1,3 +1,5 @@
+/* Styling for the new-tweet box */
+
 section.new-tweet {
     border-radius: 10px;
     border: 1px solid grey;
@@ -26,5 +28,5 @@ textarea {
 }
 
 input {
-   margin-bottom:10px;
+    margin-bottom:10px;
 }

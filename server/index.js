@@ -16,16 +16,16 @@ const MongoClient = require('mongodb').MongoClient
 
 
 MongoClient.connect('mongodb://localhost:27017/tweeter', (err, db) => {
-  if (err) throw err
+    if (err) throw err
 
-  const DataHelpers = require("./lib/data-helpers.js")(db);
-  const tweetsRoutes = require("./routes/tweets")(DataHelpers);
-  app.use("/tweets", tweetsRoutes);
-  console.log('App is up and running!')  
+    const DataHelpers = require("./lib/data-helpers.js")(db);
+    const tweetsRoutes = require("./routes/tweets")(DataHelpers);
+    app.use("/tweets", tweetsRoutes);
+    console.log('App is up and running!')  
 
 })
 
 
 app.listen(PORT, () => {
-  console.log("Example app listening on port " + PORT);
+    console.log("Example app listening on port " + PORT);
 });
