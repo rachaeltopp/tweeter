@@ -76,3 +76,11 @@ article.tweet .twitter-handle {
     padding-right: 5px;
 
 }
+
+.fa-flag:before {
+    padding-right: 5px;
+}
+
+.fa-retweet:before {
+    padding-right: 5px;
+}
