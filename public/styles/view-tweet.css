@@ -64,6 +64,7 @@ article.tweet h2 {
 
 article.tweet p {
     padding-left: 10px;
+    padding-right: 10px;
     font-size: larger;
 }
 

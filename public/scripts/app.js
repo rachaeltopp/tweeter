@@ -127,6 +127,7 @@ function parseHumanDate(timeCreated) {
           });
 
           $("form").trigger("reset");
+          $(".counter").text(140);
 
       });
       //function to slide toggle the tweet box upon clicking compose button
