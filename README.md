@@ -7,7 +7,11 @@ It is a full-stack web application that uses HTML, CSS, JS, jQuery and AJAX on t
 ## Final Product
 
 ![Compose Button](/docs/compose-button.png?raw=true)
+
+
 ![Compose Box](/docs/compose-box.png?raw=true)
+
+
 ![Hover Tweet](/docs/hover-tweet.png?raw=true)
 
 
